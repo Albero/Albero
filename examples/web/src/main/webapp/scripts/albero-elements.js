@@ -286,5 +286,4 @@ nl.trivento.albero.elements.ElementFactories = {
 		albero.addElementFactory('combo box', nl.trivento.albero.elements.ComboBox);
 		albero.addElementFactory('radio buttons', nl.trivento.albero.elements.RadioButtons);
 		albero.addElementFactory('check box', nl.trivento.albero.elements.CheckBox);
-	}
 };

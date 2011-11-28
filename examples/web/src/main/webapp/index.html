@@ -94,7 +94,11 @@
 			function updateResults(albero) {
 				var resultsBlock = document.getElementById('results-body');
 
+<<<<<<< HEAD
 				nl.trivento.albero.Utilities.clear(resultsBlock);
+=======
+				nl.profict.albero.Utilities.clear(resultsBlock);
+>>>>>>> 0c126760db3cfee1409a3c6b8cda0fc36b30438f
 
 				var results = albero.getResults();
 
@@ -123,8 +127,13 @@
 				var button = document.createElement('button');
 				button.appendChild(document.createTextNode('Ga verder'));
 
+<<<<<<< HEAD
 				nl.trivento.albero.Utilities.addEventListener(button, 'click', function() {
 					nl.trivento.albero.Utilities.clear(document.getElementById('albero'));
+=======
+				nl.profict.albero.Utilities.addEventListener(button, 'click', function() {
+					nl.profict.albero.Utilities.clear(document.getElementById('albero'));
+>>>>>>> 0c126760db3cfee1409a3c6b8cda0fc36b30438f
 
 					callback();
 				});
@@ -158,7 +167,11 @@
 				link.href = '#' + node;
 				link.appendChild(document.createTextNode(text));
 
+<<<<<<< HEAD
 				nl.trivento.albero.Utilities.addEventListener(link, 'click', function() {
+=======
+				nl.profict.albero.Utilities.addEventListener(link, 'click', function() {
+>>>>>>> 0c126760db3cfee1409a3c6b8cda0fc36b30438f
 					previousNodeGroup = nodeGroup;
 
 					albero.revisit(nodeGroup, node);
@@ -190,10 +203,17 @@
 				previousNodeGroup = nodeGroup;
 			}
 
+<<<<<<< HEAD
 			nl.trivento.albero.Utilities.addEventListener(document.getElementById('start-button'), 'click', function() {
 				var albero = new nl.trivento.albero.Albero('http://' + location.host + '/proxy', 'demo', 'nl', 'random', {}, 'albero');
 
 				nl.trivento.albero.elements.ElementFactories.addDefaultElementFactories(albero);
+=======
+			nl.profict.albero.Utilities.addEventListener(document.getElementById('start-button'), 'click', function() {
+				var albero = new nl.profict.albero.Albero('http://' + location.host + '/proxy', 'demo', 'nl', 'random', {}, 'albero');
+
+				nl.profict.albero.elements.ElementFactories.addDefaultElementFactories(albero);
+>>>>>>> 0c126760db3cfee1409a3c6b8cda0fc36b30438f
 				albero.addElementFactory('data list', example.elements.DataList);
 
 				albero.addListener({

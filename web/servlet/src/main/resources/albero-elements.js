@@ -280,6 +280,7 @@ nl.trivento.albero.elements = function() {
 	};
 }();
 
+<<<<<<< HEAD
 nl.trivento.albero.elements.ElementFactories = {
 	addDefaultElementFactories: function(albero) {
 		albero.addElementFactory('text field', nl.trivento.albero.elements.TextField);
@@ -287,5 +288,14 @@ nl.trivento.albero.elements.ElementFactories = {
 		albero.addElementFactory('combo box', nl.trivento.albero.elements.ComboBox);
 		albero.addElementFactory('radio buttons', nl.trivento.albero.elements.RadioButtons);
 		albero.addElementFactory('check box', nl.trivento.albero.elements.CheckBox);
+=======
+nl.profict.albero.elements.ElementFactories = {
+	addDefaultElementFactories: function(albero) {
+		albero.addElementFactory('text field', nl.profict.albero.elements.TextField);
+		albero.addElementFactory('text area', nl.profict.albero.elements.TextArea);
+		albero.addElementFactory('combo box', nl.profict.albero.elements.ComboBox);
+		albero.addElementFactory('radio buttons', nl.profict.albero.elements.RadioButtons);
+		albero.addElementFactory('check box', nl.profict.albero.elements.CheckBox);
+>>>>>>> 0c126760db3cfee1409a3c6b8cda0fc36b30438f
 	}
 };
