@@ -1,0 +1,7 @@
+compositeTree(code: 'include') {
+	tree('included_question') {
+		dynamicProperty 'included', true
+	}
+
+	tree 'included_result'
+}

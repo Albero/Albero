@@ -1,0 +1,23 @@
+def projectNames = [
+	'common',
+	'engine',
+	'examples-web',
+	'model',
+	'parsers-groovy',
+	'repositories-classpath', 'repositories-database',
+	'testing',
+	'traversal-random',
+	'web-proxy', 'web-servlet'
+]
+
+projectNames.each {projectName ->
+	include "albero-$projectName"
+
+	File projectDir = rootDir
+
+	projectName.split('-').each {name ->
+		projectDir = new File(projectDir, name)
+	}
+
+	project(":albero-$projectName").projectDir = projectDir
+}

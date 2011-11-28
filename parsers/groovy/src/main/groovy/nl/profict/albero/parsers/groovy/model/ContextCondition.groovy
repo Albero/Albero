@@ -1,0 +1,77 @@
+package nl.profict.albero.parsers.groovy.model
+
+import nl.profict.albero.model.Context
+
+class ContextCondition extends Condition {
+	private String name
+
+	private Closure test
+
+	public ContextCondition(String name) {
+		this.name = name
+
+		test = {context -> (Boolean) context.getVariable(Context.INFORMATION, name)}
+	}
+
+	Boolean evaluate(Context context) {
+		context.getVariableNames(Context.INFORMATION).contains(name) ? test(context) : null
+	}
+
+	def propertyMissing(String name) {
+        this.name = "${this.name}.${name}"
+
+		this
+	}
+
+	Condition lessThan(Number number) {
+		test = {context -> ((Number) context.getVariable(Context.INFORMATION, name)) < number}
+
+		this
+	}
+
+	Condition lessThanOrEqualTo(Number number) {
+		test = {context -> ((Number) context.getVariable(Context.INFORMATION, name)) <= number}
+
+		this
+	}
+
+	Condition greaterThan(Number number) {
+		test = {context -> ((Number) context.getVariable(Context.INFORMATION, name)) > number}
+
+		this
+	}
+
+	Condition greaterThanOrEqualTo(Number number) {
+		test = {context -> ((Number) context.getVariable(Context.INFORMATION, name)) >= number}
+
+		this
+	}
+
+	Condition is(Object value) {
+		test = {context -> context.getVariable(Context.INFORMATION, name) == value}
+
+		this
+	}
+
+	Condition before(Date date) {
+		test = {context -> Date.parse('d-M-yyyy', context.getVariable(Context.INFORMATION, name)).before(date)}
+
+		this
+	}
+
+	Condition after(Date date) {
+		test = {context -> Date.parse('d-M-yyyy', context.getVariable(Context.INFORMATION, name)).after(date)}
+
+		this
+	}
+
+	Condition contains(Closure valueTest) {
+		test = {context -> context.getVariable(Context.INFORMATION, name).find(valueTest) != null}
+
+		this
+	}
+
+	Condition contains(Object value) {
+		contains({it == value})
+	}
+}

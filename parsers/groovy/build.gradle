@@ -1,0 +1,7 @@
+apply plugin: 'groovy'
+
+dependencies {
+	compile project(':albero-common'), project(':albero-engine'), project(':albero-model')
+
+	groovy group: 'org.codehaus.groovy', name: 'groovy-all', version: '1.8.2'
+}

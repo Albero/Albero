@@ -1,0 +1,5 @@
+dependencies {
+	compile project(':albero-common'), project(':albero-engine')
+
+	compile group: 'commons-dbcp', name: 'commons-dbcp', version: '1.2.2'
+}

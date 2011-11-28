@@ -1,0 +1,12 @@
+tree(code: 'nodes with conditions') {
+	model {
+		male 'boolean'
+		birthday 'date'
+	}
+
+	nodes {
+		question(labelText: 'When were you born?', answers: 'birthday') {
+			when male
+		}
+	}
+}

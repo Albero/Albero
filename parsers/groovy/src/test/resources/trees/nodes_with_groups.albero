@@ -1,0 +1,16 @@
+tree(code: 'nodes with groups') {
+	model {
+		popularHolidayCountries(type: 'text', list: true)
+		holidayCountry(type: 'text')
+	}
+
+	nodes {
+		values(property: 'popularHolidayCountries', group: 'holiday') {
+			value 'Spain'
+			value 'Italy'
+			value 'Greece'
+		}
+
+		question(answers: 'holidayCountry', group: 'holiday', labelText: 'Where would you like to travel to?')
+	}
+}

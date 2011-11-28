@@ -1,0 +1,18 @@
+tree {
+	code = 'compound model'
+
+	types {
+		type(name: 'address') {
+			property(name: 'street', type: 'text')
+			city('text')
+		}
+
+		person {
+			address(type: 'address')
+		}
+	}
+
+	model {
+		person(type: 'person')
+	}
+}

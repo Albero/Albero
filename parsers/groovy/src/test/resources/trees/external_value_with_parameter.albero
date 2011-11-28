@@ -1,0 +1,11 @@
+tree(code: 'external value with parameter') {
+	model {
+		currentTime(type: 'text')
+	}
+
+	nodes {
+		externalValue(from: 'time provider', property: 'currentTime') {
+			parameter(name: 'dst', value: true)
+		}
+	}
+}

@@ -1,0 +1,40 @@
+tree(code: 'result from dictionary') {
+	dictionary {
+		translation(role: 'en', key: 'description.spring', translation: 'It\'s warm!')
+		translation(role: 'en', key: 'description.summer', translation: 'It\'s hot!')
+		translation(role: 'en', key: 'description.autumn', translation: 'It\'s crisp!')
+		translation(role: 'en', key: 'description.winter', translation: 'It\'s cold!')
+	}
+
+	model {
+		season('number')
+	}
+
+	results {
+		model {
+			description('text')
+		}
+
+		rules {
+			rule {
+				when season.is('spring')
+				set 'description', 'description.spring'
+			}
+
+			rule {
+				when season.is('summer')
+				set 'description', 'description.summer'
+			}
+
+			rule {
+				when season.is('autumn')
+				set 'description', 'description.autumn'
+			}
+
+			rule {
+				when season.is('winter')
+				set 'description', 'description.winter'
+			}
+		}
+	}
+}

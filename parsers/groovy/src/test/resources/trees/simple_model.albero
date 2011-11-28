@@ -1,0 +1,6 @@
+tree('simple model') {
+	model {
+		property(name: 'name', type: 'text')
+		age('number')
+	}
+}

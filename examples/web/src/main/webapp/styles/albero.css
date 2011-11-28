@@ -1,0 +1,191 @@
+body{
+	font-family: verdana, geneva, arial, helvetica, sans-serif;
+	font-size: 0.7em;
+	margin: 0 auto;
+	padding: 0;
+	overflow-y: auto;
+	overflow-x: none;	
+	border-collapse: collapse;	
+}
+
+div#header_logo{
+	position:relative;
+	/*background-image: url("../images/hdr_albero.gif");*/
+	background-image: url("../images/dwz_merk_header.gif");
+	background-repeat: no-repeat;
+	background-position: 3 5;
+	height: 40px;
+}
+
+div#header {
+	height: 25px;
+	/*background-image: url("../images/bg_head.gif");*/
+	text-indent: 5px;
+	background-color: red;
+	color: #FFF;
+	line-height: 25px;
+}
+
+div#kruimels{
+	background-color: #000;
+	color: #CCC;
+	text-indent: 5px;	
+}	
+
+.menu {
+	float: right;
+	right: 15px;
+	width: 230px;
+	height: 80%;
+	background-color: #CCC;
+}
+
+.content {
+	position: absolute;
+	top: 60px;
+	margin-left: 220px;
+	margin-right: 220px;
+	width: 80%;
+	padding-top: 10px;
+	text-indent: 10px;
+}
+
+.content div#albero{
+	padding-top: 30px;
+	margin-top: 20px;
+	/*background-image: url("../images/bg_albero.jpg");
+	border: 1px;
+	background-position: 0 -25;
+	border-style: dashed;
+	border-color: red;*/
+	vertical-align: middle;
+}
+
+div#albero {
+	margin-left: 5px;;
+	margin-right: auto;
+	padding: 10px;
+	border: 0px solid black;
+	width: 80%;
+
+}
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+div.element, div.submit {
+	padding: 5px;
+}
+
+div.element {
+	background-position: 5px 5px;
+	text-align: left;
+	padding-left: 40px;
+	vertical-align: top;
+	background-image: url("../images/icon_q_red.gif");
+	background-repeat: no-repeat;	
+	background-position: 20 3 ;
+}
+
+button
+{
+	background-image: url("../images/button_grey.gif");
+	background-repeat: no-repeat;	
+	background-position: 80px 0px;	
+	background-color: #FFF;
+	border-style: none;
+	width: 125px;
+	height: 19px;
+	text-align: left;
+	font-weight: bold;
+	cursor:pointer;
+	color: red;
+}
+
+div.submit {
+	padding-top: 0px;
+	text-align: right;
+	margin-right: 50px;
+
+}
+
+div.submit button:after {
+	content: 'Ga verder'
+}
+
+select {
+	width: 153px;
+}
+
+
+label {
+	padding-right: 10px;
+}
+
+label.inline {
+	padding-left: 5px;
+}
+
+
+/** Tabellen context en resultaat **/
+
+#context, table#results {
+	text-align: center;
+}
+
+#context {
+	border-collapse: collapse;
+	border: none; 
+	margin-top: 10px;
+	bottom: 0px;
+	margin-left: 36px;
+	padding: 2px;
+	
+}
+
+#context td {
+	text-align: left;
+	text-indent: 10px;
+}
+
+#context-body{
+	font-size: 0.7em;
+	color: #000;
+	text-indent: 5px;
+}
+
+#context-body tr{
+	background-image: url("../images/icon_q_grey.gif");	
+	background-repeat: no-repeat;
+	background-position: 0 10;
+	line-height: 40px;	
+}
+
+#context-body td{
+		padding-left: 20px;
+	}
+
+#results{
+	position: absolute;
+	top: 90px;
+	right:0px;	
+	border: 1px;
+	width: 225px;
+	font-size: 1em;
+	color: #FFF;
+	text-indent: 5px;
+}
+
+#results thead th{
+	background-color: #333;
+	text-align: left;
+}
+
+#results tbody tr{
+	background-color: #EEE;
+	color: #000;
+	text-align: left;
+	text-indent: 3px;
+}

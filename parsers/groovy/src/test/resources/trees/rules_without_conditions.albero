@@ -1,0 +1,13 @@
+tree(code: 'rules without conditions') {
+	results {
+		model {
+			climate('text')
+		}
+
+		rules {
+			rule {
+				set 'climate', 'tropical'
+			}
+		}
+	}
+}

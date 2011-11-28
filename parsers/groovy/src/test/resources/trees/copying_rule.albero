@@ -1,0 +1,18 @@
+tree(code: 'copying rule') {
+	model {
+		original('text')
+	}
+
+	results {
+		model {
+			copy('text')
+		}
+
+		rules {
+			rule {
+				when original
+				copy 'copy', 'original'
+			}
+		}
+	}
+}

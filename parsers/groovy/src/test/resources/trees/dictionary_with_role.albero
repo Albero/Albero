@@ -1,0 +1,8 @@
+tree(code: 'dictionary with role') {
+	dictionary {
+		withRole('en') {
+			translation(key: 'model.name', translation: 'Name')
+			translation(key: 'model.age', translation: 'Age')
+		}
+	}
+}

@@ -1,0 +1,18 @@
+tree(code: 'multiple choice question for list property') {
+	dictionary {}
+
+	model {
+		cities(type: 'text', list: true)
+	}
+
+	nodes {
+		multipleChoiceQuestion(labelText: 'Which of these cities have you lived in?', answers: 'cities') {
+			options = [
+				'Amsterdam',
+				'Utrecht',
+				'Groningen',
+				'Maastricht'
+			]
+		}
+	}
+}

@@ -1,0 +1,5 @@
+tree(code: 'dictionary') {
+	dictionary {
+		translation(role: 'en', key: 'model.name', translation: 'Name')
+	}
+}

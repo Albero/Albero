@@ -1,0 +1,19 @@
+tree {
+	code = 'multiple choice question'
+
+	dictionary {}
+
+	model {
+		favouriteColour('text')
+	}
+
+	nodes {
+		multipleChoiceQuestion(labelText: 'What\'s your favourite colour?', answers: 'favouriteColour') {
+			options = [
+				'red',
+				'yellow',
+				'blue'
+			]
+		}
+	}
+}

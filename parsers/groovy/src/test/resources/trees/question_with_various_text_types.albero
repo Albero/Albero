@@ -1,0 +1,9 @@
+tree(code: 'question with various text types') {
+	model {
+		car('text')
+	}
+
+	nodes {
+		question(introductionText: 'We would now like to ask you some questions about your preferences.', labelText: 'What would be your dream car?', answers: 'car')
+	}
+}

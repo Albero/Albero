@@ -1,0 +1,5 @@
+dependencies {
+	['common', 'model', 'engine'].each {
+		compile project(":albero-${it}")
+	}
+}

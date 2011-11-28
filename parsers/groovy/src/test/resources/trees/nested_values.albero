@@ -1,0 +1,19 @@
+tree(code: 'nested values') {
+	types {
+		sport {
+			name 'text'
+		}
+	}
+
+	model {
+		sports(type: 'sport', list: true)
+	}
+
+	nodes {
+		values(property: 'sports') {
+			value(value: [name: 'Soccer'])
+			value(value: [name: 'Tennis'])
+			value(value: [name: 'Hockey'])
+		}
+	}
+}

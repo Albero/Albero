@@ -1,0 +1,19 @@
+tree(code: 'property validation') {
+	dictionary {
+		withRole('en') {
+			translation(key: 'model.age', translation: 'Age')
+			translation(key: 'question.age', translation: 'How old are you?')
+			translation(key: 'validation.required', translation: '{property} is required.')
+		}
+	}
+
+	model {
+		age('number') {
+			required()
+		}
+	}
+
+	nodes {
+		question(labelText: 'question.age', answers: 'age')
+	}
+}

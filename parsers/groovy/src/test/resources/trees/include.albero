@@ -1,0 +1,4 @@
+compositeTree(code: 'include') {
+	tree 'included_question'
+	tree 'included_result'
+}

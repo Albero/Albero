@@ -1,0 +1,16 @@
+apply plugin: 'jetty'
+
+dependencies {
+	compile project(':albero-common'), project(':albero-engine'), project(':albero-model')
+	compile project(':albero-parsers-groovy')
+	compile project(':albero-repositories-database')
+	compile project(':albero-traversal-random')
+	compile project(':albero-web-proxy'), project(':albero-web-servlet')
+
+	runtime group: 'ch.qos.logback', name: 'logback-classic', version: '0.9.30'
+	runtime group: 'mysql', name: 'mysql-connector-java', version: '5.1.6'
+}
+
+jettyRun {
+	contextPath = '/'
+}

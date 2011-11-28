@@ -1,0 +1,6 @@
+dependencies {
+	compile project(':albero-common'), project(':albero-engine'), project(':albero-model')
+
+	compile group: 'javax.servlet', name: 'servlet-api', version: '2.5'
+	compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1'
+}

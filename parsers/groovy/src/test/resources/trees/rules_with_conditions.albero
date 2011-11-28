@@ -1,0 +1,23 @@
+tree(code: 'rules with conditions') {
+	model {
+		age('number')
+	}
+
+	results {
+		model {
+			vehicle('text')
+		}
+
+		rules {
+			rule {
+				when age.lessThan(18)
+				set 'vehicle', 'bicycle'
+			}
+
+			rule {
+				when age.greaterThanOrEqualTo(18)
+				set 'vehicle', 'car'
+			}
+		}
+	}
+}

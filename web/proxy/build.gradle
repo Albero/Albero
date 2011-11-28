@@ -1,0 +1,5 @@
+dependencies {
+	compile project(':albero-common')
+
+	compile group: 'javax.servlet', name: 'servlet-api', version: '2.5'
+}

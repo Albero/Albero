@@ -1,0 +1,13 @@
+tree(code: 'values') {
+	model {
+		sports(type: 'text', list: true)
+	}
+
+	nodes {
+		values(property: 'sports') {
+			value 'Soccer'
+			value 'Tennis'
+			value 'Hockey'
+		}
+	}
+}

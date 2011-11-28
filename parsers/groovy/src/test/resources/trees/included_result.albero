@@ -1,0 +1,23 @@
+tree(code: 'included result') {
+	model {
+		age 'number'
+	}
+
+	results {
+		model {
+			votingAllowed 'boolean'
+		}
+
+		rules {
+			rule {
+				when age.lessThan(18)
+				set 'votingAllowed', false
+			}
+
+			rule {
+				when age.greaterThanOrEqualTo(18)
+				set 'votingAallowed', true
+			}
+		}
+	}
+}

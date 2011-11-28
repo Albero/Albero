@@ -1,0 +1,13 @@
+tree(code: 'compound result model') {
+	types {
+		salary {
+			amount('number')
+		}
+	}
+
+	results {
+		model {
+			salary('salary')
+		}
+	}
+}

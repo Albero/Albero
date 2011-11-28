@@ -1,0 +1,13 @@
+tree(code: 'included question') {
+	dictionary {
+		translation(role: 'en', key: 'questions.age', translation: 'What\'s your age?')
+	}
+
+	model {
+		age 'number'
+	}
+
+	nodes {
+		question(answers: 'age', labelText: 'questions.age')
+	}
+}

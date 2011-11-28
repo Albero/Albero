@@ -1,0 +1,11 @@
+tree(code: 'simple question') {
+	dictionary {}
+
+	model {
+		name('text')
+	}
+
+	nodes {
+		question(labelText: 'What\'s your name?', answers: 'name')
+	}
+}

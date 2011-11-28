@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<servlet>
+		<servlet-name>proxy</servlet-name>
+		<servlet-class>nl.profict.albero.web.ProxyServlet</servlet-class>
+
+		<init-param>
+			<param-name>albero_servlet.location</param-name>
+			<param-value>http://localhost:8080/albero</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>proxy</servlet-name>
+		<url-pattern>/proxy</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>albero</servlet-name>
+		<servlet-class>nl.profict.albero.web.AlberoServlet</servlet-class>
+
+		<init-param>
+			<param-name>albero.configurations.default.repository_class</param-name>
+			<param-value>nl.profict.albero.repositories.DatabaseRepository</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>albero.repositories.database.driver</param-name>
+			<param-value>com.mysql.jdbc.Driver</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>albero.repositories.database.url</param-name>
+			<param-value>jdbc:mysql://localhost:3306/albero</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>albero.repositories.database.user</param-name>
+			<param-value>root</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>albero.repositories.database.password</param-name>
+			<param-value></param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>albero.configurations.default.parser_classes</param-name>
+			<param-value>nl.profict.albero.parsers.groovy.GroovyParser</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>albero.configurations.default.traversal_strategy_classes</param-name>
+			<param-value>nl.profict.albero.traversal.RandomTraversalStrategy</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>albero</servlet-name>
+		<url-pattern>/albero</url-pattern>
+	</servlet-mapping>
+</web-app>
