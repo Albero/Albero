@@ -1,0 +1,48 @@
+allprojects {
+	group = 'nl.trivento.albero'
+	version = '0.2'
+}
+
+subprojects {
+	apply plugin: 'java'
+	apply plugin: 'eclipse'
+
+	sourceCompatibility = '1.5'
+	targetCompatibility = '1.5'
+
+	repositories {
+		mavenCentral()
+	}
+
+	dependencies {
+		testCompile group: 'org.testng', name: 'testng', version: '6.2'
+		testRuntime group: 'org.slf4j', name: 'slf4j-nop', version: '1.6.2'
+	}
+
+	test {
+		enabled = project.sourceSets.test.allSource.files.find {it.exists()} != null
+
+		useTestNG() {
+			scanForTestClasses = false
+
+			suiteName = 'albero'
+			testName = 'albero'
+		}
+
+		include '**/*.class'
+		exclude ''
+	}
+
+	if (!name.contains('examples')) {
+		apply plugin: 'maven'
+
+		uploadArchives {
+			repositories.mavenDeployer {
+			}
+		}
+	}
+}
+
+task createWrapper(type: Wrapper) {
+	jarFile = "${project.projectDir}/gradle-wrapper.jar"
+}
