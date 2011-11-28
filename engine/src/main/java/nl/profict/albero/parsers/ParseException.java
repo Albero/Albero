@@ -19,7 +19,6 @@ import nl.profict.albero.AlberoException;
 /**
  * Thrown by {@link Parser parsers} when they can't parse a tree.
  *
- * @author levi_h
  */
 public class ParseException extends AlberoException {
 	/**

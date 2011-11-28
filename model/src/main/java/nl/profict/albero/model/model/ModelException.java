@@ -19,7 +19,6 @@ import nl.profict.albero.AlberoException;
 /**
  * Thrown by a {@link Model model} when it is used inappropriately.
  *
- * @author levi_h
  */
 public class ModelException extends AlberoException {
 	/**

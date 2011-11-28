@@ -21,7 +21,6 @@ import nl.profict.albero.model.text.TextContainer;
 /**
  * An input form. It can contain either subforms or {@link FormElement form elements}.
  *
- * @author levi_h
  */
 public interface Form extends TextContainer {
 	/**

@@ -19,7 +19,6 @@ import nl.profict.albero.AlberoException;
 /**
  * Thrown by a {@link Configuration configuration} when something goes wrong during initialisation.
  *
- * @author levi_h
  */
 public class ConfigurationException extends AlberoException {
 	/**

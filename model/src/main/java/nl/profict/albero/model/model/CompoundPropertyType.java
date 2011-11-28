@@ -21,7 +21,6 @@ import java.util.List;
 /**
  * A property type that contains a number of subproperties.
  *
- * @author levi_h
  */
 public class CompoundPropertyType implements PropertyType {
 	private String name;

@@ -38,7 +38,6 @@ import nl.profict.albero.web.json.JsonResponseEncoder;
  * of the evaluated context and its resulting form are delegated to a {@link ContextDecoder context decoder} and a
  * {@link ResponseEncoder response encoder}, respectively.
  *
- * @author levi_h
  */
 public class AlberoServlet extends HttpServlet {
 	private Configuration configuration;

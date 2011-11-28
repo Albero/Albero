@@ -51,7 +51,6 @@ import org.json.simple.JSONObject;
  * A response encoder that converts the evaluated context and its form to JSON objects and sends those to the response
  * writer.
  *
- * @author levi_h
  */
 public class JsonResponseEncoder implements ResponseEncoder {
 	/** The logger to use. */
@@ -253,7 +252,6 @@ public class JsonResponseEncoder implements ResponseEncoder {
 	/**
 	 * A {@link JSONArray JSON array} that suppresses unchecked compiler warnings.
 	 *
-	 * @author levi_h
 	 */
 	protected static class JsonArray extends JSONArray {
 		@Override
@@ -268,7 +266,6 @@ public class JsonResponseEncoder implements ResponseEncoder {
 	/**
 	 * A {@link JSONObject JSON object} that suppresses unchecked compiler warnings.
 	 *
-	 * @author levi_h
 	 */
 	protected static class JsonObject extends JSONObject {
 		@Override

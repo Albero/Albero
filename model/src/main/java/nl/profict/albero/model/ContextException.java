@@ -19,7 +19,6 @@ import nl.profict.albero.AlberoException;
 /**
  * Thrown by {@link Context contexts} when they are used incorrectly.
  *
- * @author levi_h
  */
 public class ContextException extends AlberoException {
 	/**

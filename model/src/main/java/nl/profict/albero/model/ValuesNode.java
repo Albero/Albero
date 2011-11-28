@@ -24,7 +24,6 @@ import nl.profict.albero.model.forms.Form;
  * A node that sets a number of context variables (of type {@value Context#INFORMATION}) when it is evaluated. It does
  * not result in a form.
  *
- * @author levi_h
  */
 public class ValuesNode extends AbstractNode {
 	private Map<String, Object> values;

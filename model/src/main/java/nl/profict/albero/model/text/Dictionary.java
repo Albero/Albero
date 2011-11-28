@@ -25,7 +25,6 @@ import java.util.Map;
  * with the value {@code ten}, then the translation &quot;{value} is not a number&quot; will result in the text
  * &quot;ten is not a number&quot;.
  *
- * @author levi_h
  */
 public interface Dictionary {
 	/**

@@ -32,7 +32,6 @@ import nl.profict.albero.utilities.Logger;
  * the parsers, the traversal strategies, and the extension providers that can be used by the {@link Engine engine}. The
  * selfsame parameters are used to configure said configuration elements.
  *
- * @author levi_h
  */
 public class DefaultConfiguration implements Configuration {
 	private Map<String, String> parameters;

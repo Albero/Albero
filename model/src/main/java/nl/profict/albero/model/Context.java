@@ -27,7 +27,6 @@ import java.util.Set;
  * <li>{@value #RESULTS}
  * </ul>
  *
- * @author levi_h
  */
 public interface Context {
 	/**

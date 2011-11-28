@@ -23,7 +23,6 @@ import nl.profict.albero.model.Context;
 /**
  * The results of validating a {@link Context context}.
  *
- * @author levi_h
  */
 public class ValidationResults {
 	private List<ValidationError> errors;

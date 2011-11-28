@@ -20,7 +20,6 @@ import nl.profict.albero.model.Tree;
 /**
  * Parses the string representation of a {@link Tree}.
  *
- * @author levi_h
  */
 public interface Parser extends ConfigurationElement {
 	/**

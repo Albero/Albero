@@ -19,7 +19,6 @@ import nl.profict.albero.AlberoException;
 /**
  * Thrown by {@link ResponseEncoder response encoders} and {@link ContextDecoder context decoders}.
  *
- * @author levi_h
  */
 public class CodecException extends AlberoException {
 	/**

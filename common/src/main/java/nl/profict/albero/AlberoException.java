@@ -19,7 +19,6 @@ import nl.profict.albero.utilities.StringUtilities;
 /**
  * Root of the Albero exception hierarchy.
  *
- * @author levi_h
  */
 public class AlberoException extends RuntimeException {
 	/**

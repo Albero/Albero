@@ -20,7 +20,6 @@ import nl.profict.albero.model.text.Dictionary;
 /**
  * The context in which {@link Node nodes} and {@link ResultProvider result providers} are evaluated.
  *
- * @author wanja krah
  */
 public interface EvaluationContext {
 	/**

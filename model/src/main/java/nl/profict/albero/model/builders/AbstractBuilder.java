@@ -19,7 +19,6 @@ import nl.profict.albero.utilities.Logger;
 /**
  * Simplifies implementing the {@link Builder builder interface}.
  *
- * @author levi_h
  * @param <B> the type of the object that is being built by the builder
  * @param <I> the type of the buildable object
  */

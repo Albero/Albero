@@ -34,7 +34,6 @@ import nl.profict.albero.utilities.StringUtilities;
  * <p>
  * The location of the Albero servlet can be set using init parameter {@value #ALBERO_SERVLET_LOCATION}.
  *
- * @author levi_h
  */
 public class ProxyServlet extends HttpServlet {
 	private String alberoServletLocation;

@@ -24,7 +24,6 @@ import nl.profict.albero.model.text.Dictionary;
 /**
  * Convenience superclass of {@link Question questions}.
  *
- * @author levi_h
  */
 public abstract class AbstractQuestion implements Question {
 	private Map<String, String> texts;

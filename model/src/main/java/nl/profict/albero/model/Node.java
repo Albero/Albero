@@ -21,7 +21,6 @@ import nl.profict.albero.model.forms.Form;
 /**
  * A node in a {@link Tree decision tree}.
  *
- * @author levi_h
  */
 public interface Node {
 	/**

@@ -22,7 +22,6 @@ import nl.profict.albero.model.Tree;
 /**
  * Determines the order in which {@link Node nodes} are evaluated.
  *
- * @author levi_h
  */
 public interface TraversalStrategy extends ConfigurationElement {
 	/**

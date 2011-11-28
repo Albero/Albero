@@ -21,7 +21,6 @@ import nl.profict.albero.model.Context;
 /**
  * Decodes a context that's sent by the client.
  *
- * @author levi_h
  */
 public interface ContextDecoder {
 	/**

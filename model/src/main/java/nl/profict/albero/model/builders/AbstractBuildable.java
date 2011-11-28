@@ -23,7 +23,6 @@ import java.util.Map;
 /**
  * Simplifies implementing the {@link Buildable buildable interface}.
  *
- * @author levi_h
  */
 abstract class AbstractBuildable implements Buildable {
 	private Map<String, Property<?>> properties;

@@ -22,7 +22,6 @@ import nl.profict.albero.model.external.ExternalValueProvider;
 /**
  * Provides extensions that can be used by tree authors.
  *
- * @author levi_h
  */
 public interface ExtensionProvider extends ConfigurationElement {
 	/**

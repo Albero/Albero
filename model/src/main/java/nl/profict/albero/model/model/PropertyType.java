@@ -19,7 +19,6 @@ import java.util.List;
 /**
  * The type of a {@link Property property}.
  *
- * @author levi_h
  */
 public interface PropertyType {
 	/**

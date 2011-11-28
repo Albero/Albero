@@ -17,7 +17,6 @@ package nl.profict.albero.model;
 /**
  * Uses a context to get to a result.
  *
- * @author levi_h
  */
 public interface ResultProvider {
 	/**

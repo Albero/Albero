@@ -27,7 +27,6 @@ import nl.profict.albero.traversal.TraversalStrategy;
  * The configuration of an {@link Engine engine}. A configuration consists of {@link ConfigurationElement configuration
  * elements}, which are {@link ConfigurationElement#initialise(Configuration, Map) initialised} upon creation.
  *
- * @author levi_h
  */
 public interface Configuration {
 	/**

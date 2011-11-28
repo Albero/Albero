@@ -20,7 +20,6 @@ import org.slf4j.LoggerFactory;
  * Wraps an {@link org.slf4j.Logger SLF4J logger} to allow supplying a log message in parts. A logger can be obtained by
  * using the {@link #get(Class) get method}.
  *
- * @author levi_h
  */
 public class Logger {
 	private org.slf4j.Logger logger;

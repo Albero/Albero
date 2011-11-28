@@ -25,7 +25,6 @@ import nl.profict.albero.model.text.Dictionary;
 /**
  * Builds an {@link EvaluationContext evaluation context}.
  *
- * @author wanja krah
  */
 public class EvaluationContextBuilder
 		extends AbstractBuilder<EvaluationContext, EvaluationContextBuilder.BuildableEvaluationContext> {
@@ -76,7 +75,6 @@ public class EvaluationContextBuilder
 	/**
 	 * A buildable evaluation context.
 	 *
-	 * @author wanja krah
 	 */
 	static class BuildableEvaluationContext extends AbstractBuildable implements EvaluationContext {
 		/**

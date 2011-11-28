@@ -41,7 +41,6 @@ import org.apache.commons.dbcp.BasicDataSource;
  *     ({@value #URL}), user ({@value #USER}), and password ({@value #PASSWORD}), all of which are required.
  * </ul>
  *
- * @author levi_h
  */
 public class DatabaseRepository implements Repository {
 	private DataSource dataSource;

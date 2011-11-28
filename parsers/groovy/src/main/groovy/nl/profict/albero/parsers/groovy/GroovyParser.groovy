@@ -23,7 +23,6 @@ import nl.profict.albero.parsers.groovy.builders.TreeContainer
 /**
  * Parses <a href="http://groovy.codehaus.org">Groovy</a> scripts.
  *
- * @author levi_h
  */
 class GroovyParser implements Parser {
 	private Configuration configuration

@@ -22,7 +22,6 @@ import java.util.Map;
  * It is possible that the provision depends on some parameters; in that case, implementations are required to document
  * that.
  *
- * @author wanja krah
  */
 public interface ExternalValueProvider {
 	/**

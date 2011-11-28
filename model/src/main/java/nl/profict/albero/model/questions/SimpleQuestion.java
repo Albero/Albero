@@ -33,7 +33,6 @@ import nl.profict.albero.model.validation.ValidationResults;
 /**
  * A question that answers a property of a {@link SimplePropertyType simple type}.
  *
- * @author levi_h
  */
 public class SimpleQuestion extends AbstractQuestion {
 	private Model model;

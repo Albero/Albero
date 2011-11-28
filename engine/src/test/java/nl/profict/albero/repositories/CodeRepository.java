@@ -22,7 +22,6 @@ import nl.profict.albero.parsers.CodeParser;
 /**
  * A repository that delegates to the {@link CodeParser code parser}.
  *
- * @author levi_h
  */
 public class CodeRepository implements Repository {
 	/**

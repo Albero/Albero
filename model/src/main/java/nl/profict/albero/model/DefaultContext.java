@@ -22,7 +22,6 @@ import java.util.Set;
 /**
  * A default {@link Context context} implementation.
  *
- * @author levi_h
  */
 public class DefaultContext implements Context {
 	private Map<String, Map<String, Object>> variables;

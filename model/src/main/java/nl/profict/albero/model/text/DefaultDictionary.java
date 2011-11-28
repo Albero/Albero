@@ -23,7 +23,6 @@ import nl.profict.albero.utilities.StringUtilities;
 /**
  * A default {@link Dictionary dictionary} implementation.
  *
- * @author levi_h
  */
 public class DefaultDictionary implements Dictionary {
 	private Map<RoleAndKey, String> translations;

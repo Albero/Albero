@@ -19,7 +19,6 @@ import nl.profict.albero.configuration.ConfigurationElement;
 /**
  * Stores information about trees.
  *
- * @author levi_h
  */
 public interface Repository extends ConfigurationElement {
 	/**

@@ -19,7 +19,6 @@ import nl.profict.albero.AlberoException;
 /**
  * Thrown by a {@link Repository repository} when something goes wrong while locating tree information.
  *
- * @author levi_h
  */
 public class RepositoryException extends AlberoException {
 	/**

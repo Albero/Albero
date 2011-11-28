@@ -19,7 +19,6 @@ import nl.profict.albero.model.model.PropertyType;
 /**
  * The data type of a {@link FormElement form element}.
  *
- * @author levi_h
  */
 public interface FormElementType {
 	/**

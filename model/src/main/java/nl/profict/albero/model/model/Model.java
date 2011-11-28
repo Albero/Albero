@@ -19,7 +19,6 @@ import nl.profict.albero.model.Tree;
 /**
  * The model of a {@link Tree tree}.
  *
- * @author levi_h
  */
 public interface Model {
 	/**

@@ -23,7 +23,6 @@ import nl.profict.albero.model.validation.PropertyValidator;
 /**
  * A property of a model or result model.
  *
- * @author levi_h
  */
 public class Property {
 	private String name;

@@ -26,7 +26,6 @@ import nl.profict.albero.model.text.Dictionary;
 /**
  * A question with one or more answers that are selected from a certain set of options.
  *
- * @author levi_h
  */
 public class MultipleChoiceQuestion extends SimpleQuestion {
 	private List<?> options;

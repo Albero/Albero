@@ -36,7 +36,6 @@ import org.json.simple.parser.ParseException;
  * A context decoder that parses the contents of the request parameter {@value #CONTEXT_PARAMETER_NAME} into a JSON
  * object and converts it to a context.
  *
- * @author levi_h
  */
 public class JsonContextDecoder implements ContextDecoder {
 	private JSONParser jsonParser;

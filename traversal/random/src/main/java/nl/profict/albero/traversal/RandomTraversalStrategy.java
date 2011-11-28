@@ -29,7 +29,6 @@ import nl.profict.albero.utilities.Logger;
 /**
  * A traversal strategy that picks a random node, but prefers nodes in the same group.
  *
- * @author levi_h
  */
 public class RandomTraversalStrategy implements TraversalStrategy {
 	private Random random;

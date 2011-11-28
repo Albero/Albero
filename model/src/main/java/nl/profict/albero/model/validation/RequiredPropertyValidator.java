@@ -25,7 +25,6 @@ import nl.profict.albero.model.text.Dictionary;
 /**
  * Validates that a required property actually has a value.
  *
- * @author levi_h
  */
 public class RequiredPropertyValidator implements PropertyValidator {
 	/**

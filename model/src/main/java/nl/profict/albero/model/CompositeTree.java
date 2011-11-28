@@ -31,7 +31,6 @@ import nl.profict.albero.utilities.StringUtilities;
 /**
  * A tree that consists of other trees.
  *
- * @author levi_h
  */
 public class CompositeTree implements Tree {
 	private String code;

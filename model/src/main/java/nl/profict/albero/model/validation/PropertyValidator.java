@@ -21,7 +21,6 @@ import nl.profict.albero.model.text.Dictionary;
 /**
  * Validates a context variable.
  *
- * @author levi_h
  */
 public interface PropertyValidator {
 	/**

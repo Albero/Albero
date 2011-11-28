@@ -23,7 +23,6 @@ import nl.profict.albero.model.validation.ValidationResults;
 /**
  * A question. The given answer influences the results of a tree.
  *
- * @author levi_h
  * @see QuestionNode
  */
 public interface Question extends TextContainer {

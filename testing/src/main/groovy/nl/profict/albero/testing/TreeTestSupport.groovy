@@ -23,7 +23,6 @@ import org.testng.annotations.BeforeClass
 /**
  * Base class for tests that check tree definitions.
  *
- * @author levi_h
  */
 abstract class TreeTestSupport {
 	protected Engine engine

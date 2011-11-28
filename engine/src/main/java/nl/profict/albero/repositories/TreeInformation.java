@@ -17,7 +17,6 @@ package nl.profict.albero.repositories;
 /**
  * Information about a tree that is stored in a repository.
  *
- * @author levi_h
  */
 public class TreeInformation {
 	private String tree;

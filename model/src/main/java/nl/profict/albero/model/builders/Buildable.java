@@ -17,7 +17,6 @@ package nl.profict.albero.model.builders;
 /**
  * An object that can be built using a {@link Builder builder}.
  *
- * @author levi_h
  */
 public interface Buildable {
 	/**

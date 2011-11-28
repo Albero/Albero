@@ -27,7 +27,6 @@ import nl.profict.albero.model.validation.ValidationResults;
 /**
  * A node that needs a {@link Question question} to be answered.
  *
- * @author levi_h
  */
 public class QuestionNode extends AbstractNode {
 	private Question question;

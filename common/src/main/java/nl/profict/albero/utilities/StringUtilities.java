@@ -19,7 +19,6 @@ import java.util.Map;
 /**
  * Contains utility methods related to strings.
  *
- * @author levi_h
  */
 public class StringUtilities {
 	private StringUtilities() {}

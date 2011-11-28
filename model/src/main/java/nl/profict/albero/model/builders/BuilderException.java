@@ -19,7 +19,6 @@ import nl.profict.albero.AlberoException;
 /**
  * Thrown by a builder if it is used inappropriately.
  *
- * @author levi_h
  */
 public class BuilderException extends AlberoException {
 	/**

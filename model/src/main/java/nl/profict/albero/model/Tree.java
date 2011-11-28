@@ -22,7 +22,6 @@ import nl.profict.albero.model.text.Dictionary;
 /**
  * A decision tree.
  *
- * @author levi_h
  */
 public interface Tree {
 	/**

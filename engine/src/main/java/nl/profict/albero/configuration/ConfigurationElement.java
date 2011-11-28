@@ -19,7 +19,6 @@ import java.util.Map;
 /**
  * A part of a {@link Configuration configuration}.
  *
- * @author levi_h
  */
 public interface ConfigurationElement {
 	/**

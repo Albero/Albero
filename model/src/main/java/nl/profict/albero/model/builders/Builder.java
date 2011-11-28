@@ -17,7 +17,6 @@ package nl.profict.albero.model.builders;
 /**
  * Builds an object.
  *
- * @author levi_h
  * @param <B> the type of the built object
  */
 public interface Builder<B> {

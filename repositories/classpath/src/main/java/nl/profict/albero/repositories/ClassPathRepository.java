@@ -35,7 +35,6 @@ import nl.profict.albero.utilities.Logger;
  * A repository that reads trees from the class path. All resources are expected to reside in the {@code trees}
  * directory. The parser that's being used is obtained by looking at the resource's extension.
  *
- * @author levi_h
  */
 public class ClassPathRepository implements Repository {
 	private Map<String, TreeInformation> trees;

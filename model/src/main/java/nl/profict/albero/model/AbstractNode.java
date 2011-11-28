@@ -24,7 +24,6 @@ import java.util.Map;
 /**
  * Convenience superclass of {@link Node node} implementations.
  *
- * @author levi_h
  */
 public abstract class AbstractNode implements Node {
 	private String code;

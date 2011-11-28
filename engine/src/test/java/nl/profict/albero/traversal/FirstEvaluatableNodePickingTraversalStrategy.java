@@ -25,7 +25,6 @@ import nl.profict.albero.model.Tree;
 /**
  * A traversal strategy that picks the first evaluatable node.
  *
- * @author levi_h
  */
 public class FirstEvaluatableNodePickingTraversalStrategy implements TraversalStrategy {
 	/**

@@ -17,7 +17,6 @@ package nl.profict.albero.model.validation;
 /**
  * A validation error.
  *
- * @author levi_h
  */
 public class ValidationError {
 	private String message;

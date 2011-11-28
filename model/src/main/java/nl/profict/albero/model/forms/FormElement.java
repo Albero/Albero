@@ -21,7 +21,6 @@ import nl.profict.albero.model.text.TextContainer;
 /**
  * An element in a {@link Form form}.
  *
- * @author levi_h
  */
 public interface FormElement extends TextContainer {
 	/**

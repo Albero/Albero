@@ -47,7 +47,6 @@ import nl.profict.albero.model.text.Dictionary;
  * <dd>A decision tree that determines the discount percentage for an order.</dd>
  * </dl>
  *
- * @author levi_h
  */
 public class CodeParser implements Parser {
 	private Map<String, Tree> trees;
@@ -83,7 +82,6 @@ public class CodeParser implements Parser {
 	 * +-----+    +-----+
 	 * </pre>
 	 *
-	 * @author levi_h
 	 */
 	private static class DiscountTree implements Tree {
 		private Dictionary dictionary;

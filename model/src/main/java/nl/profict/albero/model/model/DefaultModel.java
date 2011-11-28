@@ -21,7 +21,6 @@ import java.util.List;
 /**
  * A default {@link Model model} implementation.
  *
- * @author levi_h
  */
 public class DefaultModel implements Model {
 	private List<Property> properties;

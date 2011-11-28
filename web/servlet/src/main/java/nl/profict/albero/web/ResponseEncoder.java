@@ -22,7 +22,6 @@ import nl.profict.albero.model.forms.Form;
 /**
  * Encodes an evaluated context and the form that the evaluation produced and sends it back to the client.
  *
- * @author levi_h
  */
 public interface ResponseEncoder {
 	/**

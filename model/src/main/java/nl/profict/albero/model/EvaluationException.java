@@ -19,7 +19,6 @@ import nl.profict.albero.AlberoException;
 /**
  * Thrown by {@link Node nodes} and {@link ResultProvider result providers} when something goes wrong during evaluation.
  *
- * @author levi_h
  */
 public class EvaluationException extends AlberoException {
 	/**

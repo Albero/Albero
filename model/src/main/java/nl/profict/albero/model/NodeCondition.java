@@ -17,7 +17,6 @@ package nl.profict.albero.model;
 /**
  * A condition that a {@link Context context} has to conform to before a {@link Node node} can be evaluated.
  *
- * @author levi_h
  */
 public interface NodeCondition {
 	/**

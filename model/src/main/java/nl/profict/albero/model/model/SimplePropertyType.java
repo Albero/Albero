@@ -20,7 +20,6 @@ import java.util.List;
 /**
  * A property type without subproperties.
  *
- * @author levi_h
  */
 public class SimplePropertyType implements PropertyType {
 	private String name;

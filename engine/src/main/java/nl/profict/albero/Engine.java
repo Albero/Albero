@@ -40,7 +40,6 @@ import nl.profict.albero.utilities.Logger;
 /**
  * The Albero engine.
  *
- * @author levi_h
  */
 public class Engine {
 	private Configuration configuration;

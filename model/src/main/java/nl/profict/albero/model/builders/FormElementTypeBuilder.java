@@ -19,7 +19,6 @@ import nl.profict.albero.model.forms.FormElementType;
 /**
  * Builds a {@link FormElementType form element type}.
  *
- * @author levi_h
  */
 public class FormElementTypeBuilder extends AbstractBuilder<FormElementType, FormElementTypeBuilder.BuildableFormElementType> {
 	/**
@@ -56,7 +55,6 @@ public class FormElementTypeBuilder extends AbstractBuilder<FormElementType, For
 	/**
 	 * A buildable form element type.
 	 *
-	 * @author levi_h
 	 */
 	static class BuildableFormElementType extends AbstractBuildable implements FormElementType {
 		/**

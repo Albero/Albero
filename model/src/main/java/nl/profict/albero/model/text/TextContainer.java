@@ -19,7 +19,6 @@ import java.util.Map;
 /**
  * Contains a number of texts.
  *
- * @author levi_h
  */
 public interface TextContainer {
 	/**

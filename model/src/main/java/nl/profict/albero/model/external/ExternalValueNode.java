@@ -26,7 +26,6 @@ import nl.profict.albero.model.forms.Form;
 /**
  * Fills the model with a value from an {@link ExternalValueProvider external value provider}.
  *
- * @author wanja krah
  */
 public class ExternalValueNode extends AbstractNode {
 	private String propertyPath;

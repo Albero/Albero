@@ -27,7 +27,6 @@ import nl.profict.albero.model.validation.ValidationResults;
 /**
  * A question that is made up of other questions.
  *
- * @author levi_h
  */
 public class CompoundQuestion extends AbstractQuestion {
 	private List<Question> questions;
