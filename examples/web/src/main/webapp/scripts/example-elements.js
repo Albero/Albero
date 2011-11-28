@@ -45,18 +45,18 @@ example.elements = function() {
 
 	DataList.prototype = {
 		initialise: function() {
-			var utilities = nl.profict.albero.Utilities;
+			var utilities = nl.trivento.albero.Utilities;
 
-			this.searchListener = nl.profict.albero.Utilities.addEventListener(
-				this.searchButton, 'click', nl.profict.albero.Utilities.bind(this, this.search));
-			this.resultsListener = nl.profict.albero.Utilities.addEventListener(
-				this.resultsList, 'change', nl.profict.albero.Utilities.bind(this, this.resultsSelectionChanged));
-			this.addListener = nl.profict.albero.Utilities.addEventListener(
-				this.addButton, 'click', nl.profict.albero.Utilities.bind(this, this.add));
-			this.selectionListener = nl.profict.albero.Utilities.addEventListener(
-				this.selectionList, 'change', nl.profict.albero.Utilities.bind(this, this.selectionSelectionChanged));
-			this.removeListener = nl.profict.albero.Utilities.addEventListener(
-				this.removeButton, 'click', nl.profict.albero.Utilities.bind(this, this.remove));
+			this.searchListener = nl.trivento.albero.Utilities.addEventListener(
+				this.searchButton, 'click', nl.trivento.albero.Utilities.bind(this, this.search));
+			this.resultsListener = nl.trivento.albero.Utilities.addEventListener(
+				this.resultsList, 'change', nl.trivento.albero.Utilities.bind(this, this.resultsSelectionChanged));
+			this.addListener = nl.trivento.albero.Utilities.addEventListener(
+				this.addButton, 'click', nl.trivento.albero.Utilities.bind(this, this.add));
+			this.selectionListener = nl.trivento.albero.Utilities.addEventListener(
+				this.selectionList, 'change', nl.trivento.albero.Utilities.bind(this, this.selectionSelectionChanged));
+			this.removeListener = nl.trivento.albero.Utilities.addEventListener(
+				this.removeButton, 'click', nl.trivento.albero.Utilities.bind(this, this.remove));
 
 			this.performSearch('');
 			this.enableOrDisableAddButton();
@@ -64,13 +64,13 @@ example.elements = function() {
 		},
 
 		destroy: function() {
-			var utilities = nl.profict.albero.Utilities;
+			var utilities = nl.trivento.albero.Utilities;
 
-			nl.profict.albero.Utilities.removeEventListener(this.searchButton, 'click', this.searchListener);
-			nl.profict.albero.Utilities.removeEventListener(this.resultsList, 'change', this.resultsListener);
-			nl.profict.albero.Utilities.removeEventListener(this.addButton, 'click', this.addListener);
-			nl.profict.albero.Utilities.removeEventListener(this.selectionList, 'change', this.selectionListener);
-			nl.profict.albero.Utilities.removeEventListener(this.removeButton, 'click', this.removeListener);
+			nl.trivento.albero.Utilities.removeEventListener(this.searchButton, 'click', this.searchListener);
+			nl.trivento.albero.Utilities.removeEventListener(this.resultsList, 'change', this.resultsListener);
+			nl.trivento.albero.Utilities.removeEventListener(this.addButton, 'click', this.addListener);
+			nl.trivento.albero.Utilities.removeEventListener(this.selectionList, 'change', this.selectionListener);
+			nl.trivento.albero.Utilities.removeEventListener(this.removeButton, 'click', this.removeListener);
 		},
 
 		addTo: function(container) {
@@ -137,7 +137,7 @@ example.elements = function() {
 		},
 
 		updateDescription: function() {
-			nl.profict.albero.Utilities.clear(this.descriptionLabel);
+			nl.trivento.albero.Utilities.clear(this.descriptionLabel);
 
 			var element = this.getSelectedElement(this.resultsList);
 
@@ -209,7 +209,7 @@ example.elements = function() {
 		},
 
 		synchroniseList: function(list, test) {
-			nl.profict.albero.Utilities.clear(list);
+			nl.trivento.albero.Utilities.clear(list);
 
 			for (var i = 0; i < this.data.length; i++) {
 				var element = this.data[i];
@@ -229,7 +229,7 @@ example.elements = function() {
 		},
 
 		enableOrDisableAddButton: function() {
-			var test = nl.profict.albero.Utilities.bind(this, function(element) {
+			var test = nl.trivento.albero.Utilities.bind(this, function(element) {
 				return this.isElementAvailable(element);
 			});
 

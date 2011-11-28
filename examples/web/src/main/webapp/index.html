@@ -51,8 +51,8 @@
 			var previousNodeGroup = NO_PREVIOUS_NODE_GROUP;
 
 			function clearNavigationAndBreadcrumbs() {
-				nl.profict.albero.Utilities.clear(document.getElementById('navigation'));
-				nl.profict.albero.Utilities.clear(document.getElementById('context-body'));
+				nl.trivento.albero.Utilities.clear(document.getElementById('navigation'));
+				nl.trivento.albero.Utilities.clear(document.getElementById('context-body'));
 			}
 
 			function updateNavigation(albero, complete) {
@@ -94,7 +94,7 @@
 			function updateResults(albero) {
 				var resultsBlock = document.getElementById('results-body');
 
-				nl.profict.albero.Utilities.clear(resultsBlock);
+				nl.trivento.albero.Utilities.clear(resultsBlock);
 
 				var results = albero.getResults();
 
@@ -123,8 +123,8 @@
 				var button = document.createElement('button');
 				button.appendChild(document.createTextNode('Ga verder'));
 
-				nl.profict.albero.Utilities.addEventListener(button, 'click', function() {
-					nl.profict.albero.Utilities.clear(document.getElementById('albero'));
+				nl.trivento.albero.Utilities.addEventListener(button, 'click', function() {
+					nl.trivento.albero.Utilities.clear(document.getElementById('albero'));
 
 					callback();
 				});
@@ -158,7 +158,7 @@
 				link.href = '#' + node;
 				link.appendChild(document.createTextNode(text));
 
-				nl.profict.albero.Utilities.addEventListener(link, 'click', function() {
+				nl.trivento.albero.Utilities.addEventListener(link, 'click', function() {
 					previousNodeGroup = nodeGroup;
 
 					albero.revisit(nodeGroup, node);
@@ -190,10 +190,10 @@
 				previousNodeGroup = nodeGroup;
 			}
 
-			nl.profict.albero.Utilities.addEventListener(document.getElementById('start-button'), 'click', function() {
-				var albero = new nl.profict.albero.Albero('http://' + location.host + '/proxy', 'demo', 'nl', 'random', {}, 'albero');
+			nl.trivento.albero.Utilities.addEventListener(document.getElementById('start-button'), 'click', function() {
+				var albero = new nl.trivento.albero.Albero('http://' + location.host + '/proxy', 'demo', 'nl', 'random', {}, 'albero');
 
-				nl.profict.albero.elements.ElementFactories.addDefaultElementFactories(albero);
+				nl.trivento.albero.elements.ElementFactories.addDefaultElementFactories(albero);
 				albero.addElementFactory('data list', example.elements.DataList);
 
 				albero.addListener({

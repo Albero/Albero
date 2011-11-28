@@ -2,15 +2,15 @@ if (!nl) {
 	var nl = {};
 }
 
-if (!nl.profict) {
-	nl.profict = {};
+if (!nl.trivento) {
+	nl.trivento = {};
 }
 
-if (!nl.profict.albero) {
-	nl.profict.albero = {};
+if (!nl.trivento.albero) {
+	nl.trivento.albero = {};
 }
 
-nl.profict.albero.elements = function() {
+nl.trivento.albero.elements = function() {
 	function TextField(descriptor) {
 		this.label = document.createElement('label');
 		this.label.setAttribute('class', 'inline');
@@ -279,12 +279,12 @@ nl.profict.albero.elements = function() {
 	};
 }();
 
-nl.profict.albero.elements.ElementFactories = {
+nl.trivento.albero.elements.ElementFactories = {
 	addDefaultElementFactories: function(albero) {
-		albero.addElementFactory('text field', nl.profict.albero.elements.TextField);
-		albero.addElementFactory('text area', nl.profict.albero.elements.TextArea);
-		albero.addElementFactory('combo box', nl.profict.albero.elements.ComboBox);
-		albero.addElementFactory('radio buttons', nl.profict.albero.elements.RadioButtons);
-		albero.addElementFactory('check box', nl.profict.albero.elements.CheckBox);
+		albero.addElementFactory('text field', nl.trivento.albero.elements.TextField);
+		albero.addElementFactory('text area', nl.trivento.albero.elements.TextArea);
+		albero.addElementFactory('combo box', nl.trivento.albero.elements.ComboBox);
+		albero.addElementFactory('radio buttons', nl.trivento.albero.elements.RadioButtons);
+		albero.addElementFactory('check box', nl.trivento.albero.elements.CheckBox);
 	}
 };

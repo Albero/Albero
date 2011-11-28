@@ -2,11 +2,11 @@ if (!nl) {
 	var nl = {};
 }
 
-if (!nl.profict) {
-	nl.profict = {};
+if (!nl.trivento) {
+	nl.trivento = {};
 }
 
-nl.profict.albero = function() {
+nl.trivento.albero = function() {
 	function Albero(engineLocation, tree, role, traversalStrategy, information, elementId) {
 		this.elementFactories = {};
 		this.elements = [];
