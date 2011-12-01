@@ -6,9 +6,15 @@ allprojects {
 subprojects {
 	apply plugin: 'java'
 	apply plugin: 'eclipse'
+	apply plugin: 'maven'
+	apply plugin: 'signing'
 
 	sourceCompatibility = '1.5'
 	targetCompatibility = '1.5'
+
+	configurations {
+    		published.extendsFrom archives, signatures
+	}
 
 	repositories {
 		mavenCentral()
@@ -33,12 +39,69 @@ subprojects {
 		exclude ''
 	}
 
-	if (!name.contains('examples')) {
-		apply plugin: 'maven'
+	artifacts {
+		archives jar
+	}
 
-		uploadArchives {
-			repositories.mavenDeployer {
-			}
+	signing {
+    		sign configurations.archives
+	}
+	
+	uploadArchives {
+		repositories.mavenDeployer {
+			
+            beforeDeployment { MavenDeployment deployment -> signPom(deployment) }
+		
+		repository(url: 'http://buildblox.profict.nl/nexus/content/repositories/thirdparty') {
+                                        authentication(userName: 'deployment', password: 'deployment123')
+                                }
+
+                                snapshotRepository(url: 'http://buildblox.profict.nl/nexus/content/groups/public-snapshots') {
+                                        authentication(userName: 'deployment', password: 'deployment123')
+                               }
+
+            pom.project {
+               name 'Albero'
+               packaging 'jar'
+               description 'Albero is a decision tree technology'
+               url 'https://github.com/Albero/Albero'
+
+               scm {
+                   url 'scm:git@github.com:Albero/Albero.git'
+                   connection 'scm:git@github.com:Albero/Albero.git'
+                   developerConnection 'scm:git@github.com:Albero/Albero.git'
+               }
+
+               licenses {
+                   license {
+                       name 'The Apache Software License, Version 2.0'
+                       url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                       distribution 'repo'
+                   }
+               }
+
+               developers {
+                   developer {
+                       id 'bergvandenp'
+                       name 'Paul van den Berg'
+                   }
+               }
+           }
+
+           //mess with the generated pom to set the 'packaging' tag
+           pom.withXml { XmlProvider xmlProvider ->
+               def xml = xmlProvider.asString()
+               def pomXml = new XmlParser().parse(new ByteArrayInputStream(xml.toString().bytes))
+
+               pomXml.version[0] + { packaging('jar') }
+
+               def newXml = new StringWriter()
+               def printer = new XmlNodePrinter(new PrintWriter(newXml))
+               printer.preserveWhitespace = true
+               printer.print(pomXml)
+               xml.setLength(0)
+               xml.append(newXml.toString())
+           }
 		}
 	}
 }

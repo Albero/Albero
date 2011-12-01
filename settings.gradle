@@ -15,7 +15,6 @@
 def projectNames = [
 	'common',
 	'engine',
-	'examples-web',
 	'model',
 	'parsers-groovy',
 	'repositories-classpath', 'repositories-database',
