@@ -1,6 +1,6 @@
 allprojects {
 	group = 'nl.trivento.albero'
-	version = '0.2'
+	version = '0.3-SNAPSHOT'
 }
 
 subprojects {
@@ -52,18 +52,21 @@ subprojects {
 			
             beforeDeployment { MavenDeployment deployment -> signPom(deployment) }
 		
-		repository(url: 'http://buildblox.profict.nl/nexus/content/repositories/thirdparty') {
-                                        authentication(userName: 'deployment', password: 'deployment123')
+		repository(url: 'https://oss.sonatype.org/service/local/staging/deploy/maven2/') {
+                                        authentication(userName: sonatypeUsername, password: sonatypePassword)
                                 }
 
-                                snapshotRepository(url: 'http://buildblox.profict.nl/nexus/content/groups/public-snapshots') {
-                                        authentication(userName: 'deployment', password: 'deployment123')
+                                snapshotRepository(url: 'https://oss.sonatype.org/content/repositories/snapshots/') {
+                                        authentication(userName: sonatypeUsername, password: sonatypePassword)
                                }
 
             pom.project {
                name 'Albero'
                packaging 'jar'
-               description 'Albero is a decision tree technology'
+               description '''A bank decides using various criteria whether a customer wil receive a loan. An insurer uses specific information to determine which insurance product is most suitable for its customer.
+A municipality makes decisions based on yet other information, to determine whether it will grant permits or if a citizen is entitled to a public transport pass. Decision trees are frequently used in order to make such decisions or recommendations.
+
+Albero is a new generation decision tree solution. It is simple, fast, and flexible. Further, Albero is easily adaptable and can integrate easily into any environment.'''
                url 'https://github.com/Albero/Albero'
 
                scm {
