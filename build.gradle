@@ -1,126 +1,136 @@
 allprojects {
-	group = 'nl.trivento.albero'
-	version = '0.2'
+    group = 'nl.trivento.albero'
+    version = '0.2'
 }
 
 subprojects {
-	apply plugin: 'java'
-	apply plugin: 'eclipse'
-	apply plugin: 'maven'
-	apply plugin: 'signing'
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    apply plugin: 'maven'
+    apply plugin: 'signing'
 
-	sourceCompatibility = '1.5'
-	targetCompatibility = '1.5'
+    sourceCompatibility = '1.5'
+    targetCompatibility = '1.5'
 
-	configurations {
-    		published.extendsFrom archives, signatures
-	}
+    configurations {
+        published.extendsFrom archives, signatures
+    }
 
-	repositories {
-		mavenCentral()
-	}
+    repositories {
+        mavenCentral()
+    }
 
-	dependencies {
-		testCompile group: 'org.testng', name: 'testng', version: '6.2'
-		testRuntime group: 'org.slf4j', name: 'slf4j-nop', version: '1.6.2'
-	}
+    dependencies {
+        testCompile group: 'org.testng', name: 'testng', version: '6.2'
+        testRuntime group: 'org.slf4j', name: 'slf4j-nop', version: '1.6.2'
+    }
 
-	test {
-		enabled = project.sourceSets.test.allSource.files.find {it.exists()} != null
+    test {
+        enabled = project.sourceSets.test.allSource.files.find {it.exists()} != null
 
-		useTestNG() {
-			scanForTestClasses = false
+        useTestNG() {
+            scanForTestClasses = false
 
-			suiteName = 'albero'
-			testName = 'albero'
-		}
+            suiteName = 'albero'
+            testName = 'albero'
+        }
 
-		include '**/*.class'
-		exclude ''
-	}
+        include '**/*.class'
+        exclude ''
+    }
 
-	task sourcesJar(type: Jar, dependsOn:classes) {     
-		classifier = 'sources'     
-		from sourceSets.main.allSource 
-	}
+    task sourcesJar(type: Jar, dependsOn: classes) {
+        classifier = 'sources'
+        from sourceSets.main.allSource
+    }
 
-	task javadocJar(type: Jar, dependsOn:javadoc) {      
-		classifier = 'javadoc'     
-		from javadoc.destinationDir 
-	}	 
+    task javadocJar(type: Jar, dependsOn: javadoc) {
+        classifier = 'javadoc'
+        from javadoc.destinationDir
+    }
 
-	artifacts {
-		archives jar
-		archives javadocJar
-		archives sourcesJar
-	}
 
-	signing {
-    		sign configurations.archives
-	}
-	
-	uploadArchives {
-		repositories.mavenDeployer {
-			
-            beforeDeployment { MavenDeployment deployment -> signPom(deployment) }
-		
-		repository(url: 'https://oss.sonatype.org/service/local/staging/deploy/maven2/') {
-                                        authentication(userName: sonatypeUsername, password: sonatypePassword)
-                                }
 
-                                snapshotRepository(url: 'https://oss.sonatype.org/content/repositories/snapshots/') {
-                                        authentication(userName: sonatypeUsername, password: sonatypePassword)
-                               }
+    artifacts {
+        archives jar
+        archives javadocJar
+        archives sourcesJar
+    }
 
-            pom.project {
-               name 'Albero'
-               packaging 'jar'
-               description '''A bank decides using various criteria whether a customer wil receive a loan. An insurer uses specific information to determine which insurance product is most suitable for its customer.
+    signing {
+        gradle.taskGraph.whenReady {taskGraph ->
+            if (taskGraph.hasTask(uploadArchives)) {
+                sign configurations.archives
+            }
+        }
+    }
+
+    uploadArchives {
+        gradle.taskGraph.whenReady {taskGraph ->
+            if (taskGraph.hasTask(uploadArchives)) {
+
+                repositories.mavenDeployer {
+
+                    beforeDeployment { MavenDeployment deployment -> signPom(deployment) }
+
+                    repository(url: 'https://oss.sonatype.org/service/local/staging/deploy/maven2/') {
+                        authentication(userName: sonatypeUsername, password: sonatypePassword)
+                    }
+
+                    snapshotRepository(url: 'https://oss.sonatype.org/content/repositories/snapshots/') {
+                        authentication(userName: sonatypeUsername, password: sonatypePassword)
+                    }
+
+                    pom.project {
+                        name 'Albero'
+                        packaging 'jar'
+                        description '''A bank decides using various criteria whether a customer wil receive a loan. An insurer uses specific information to determine which insurance product is most suitable for its customer.
 A municipality makes decisions based on yet other information, to determine whether it will grant permits or if a citizen is entitled to a public transport pass. Decision trees are frequently used in order to make such decisions or recommendations.
 
 Albero is a new generation decision tree solution. It is simple, fast, and flexible. Further, Albero is easily adaptable and can integrate easily into any environment.'''
-               url 'https://github.com/Albero/Albero'
+                        url 'https://github.com/Albero/Albero'
 
-               scm {
-                   url 'scm:git@github.com:Albero/Albero.git'
-                   connection 'scm:git@github.com:Albero/Albero.git'
-                   developerConnection 'scm:git@github.com:Albero/Albero.git'
-               }
+                        scm {
+                            url 'scm:git@github.com:Albero/Albero.git'
+                            connection 'scm:git@github.com:Albero/Albero.git'
+                            developerConnection 'scm:git@github.com:Albero/Albero.git'
+                        }
 
-               licenses {
-                   license {
-                       name 'The Apache Software License, Version 2.0'
-                       url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-                       distribution 'repo'
-                   }
-               }
+                        licenses {
+                            license {
+                                name 'The Apache Software License, Version 2.0'
+                                url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                                distribution 'repo'
+                            }
+                        }
 
-               developers {
-                   developer {
-                       id 'bergvandenp'
-                       name 'Paul van den Berg'
-                   }
-               }
-           }
+                        developers {
+                            developer {
+                                id 'bergvandenp'
+                                name 'Paul van den Berg'
+                            }
+                        }
+                    }
 
-           //mess with the generated pom to set the 'packaging' tag
-           pom.withXml { XmlProvider xmlProvider ->
-               def xml = xmlProvider.asString()
-               def pomXml = new XmlParser().parse(new ByteArrayInputStream(xml.toString().bytes))
+                    //mess with the generated pom to set the 'packaging' tag
+                    pom.withXml { XmlProvider xmlProvider ->
+                        def xml = xmlProvider.asString()
+                        def pomXml = new XmlParser().parse(new ByteArrayInputStream(xml.toString().bytes))
 
-               pomXml.version[0] + { packaging('jar') }
+                        pomXml.version[0] + { packaging('jar') }
 
-               def newXml = new StringWriter()
-               def printer = new XmlNodePrinter(new PrintWriter(newXml))
-               printer.preserveWhitespace = true
-               printer.print(pomXml)
-               xml.setLength(0)
-               xml.append(newXml.toString())
-           }
-		}
-	}
+                        def newXml = new StringWriter()
+                        def printer = new XmlNodePrinter(new PrintWriter(newXml))
+                        printer.preserveWhitespace = true
+                        printer.print(pomXml)
+                        xml.setLength(0)
+                        xml.append(newXml.toString())
+                    }
+                }
+            }
+        }
+    }
 }
-
-task createWrapper(type: Wrapper) {
-	jarFile = "${project.projectDir}/gradle-wrapper.jar"
-}
+    task createWrapper(type: Wrapper) {
+        jarFile = "${project.projectDir}/gradle-wrapper.jar"
+    }
